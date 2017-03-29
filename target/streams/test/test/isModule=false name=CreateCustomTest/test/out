@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0m[32mCreateCustomTest:[0m[0m
+[0m[[0minfo[0m] [0m[32mA user[0m[0m
+[0m[[0minfo[0m] [0m[32m- should visit on flipKart.com[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should logged in[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select an item[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should add item to cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select and add another item to the cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should close window[0m[0m
