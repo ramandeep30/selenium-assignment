@@ -4,7 +4,7 @@
 		module="selenium$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170329122149"
+		publication="20170330111336"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

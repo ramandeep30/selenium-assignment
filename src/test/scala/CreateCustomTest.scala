@@ -66,9 +66,29 @@ class CreateCustomTest extends FlatSpec with TestSetUp {
 
   }
 
-  "user" should "close window" in {
+  "user" should "fill the address details" in {
 
-    driver.close()
 
+    if (driver.getCurrentUrl == CHECKOUT_URL) {
+      webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.pure-g-r")))
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(1) td:nth-child(2) input")).sendKeys(NAME)
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(2) td:nth-child(2) input")).sendKeys(PINCODE.toString)
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(3) td:nth-child(2) textarea")).sendKeys(ADDRESS)
+      driver.findElementByCssSelector("#city").sendKeys("New Delhi")
+      driver.findElementByCssSelector("#state > option:nth-child(11)").click()
+   // driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(4) td:nth-child(2) input")).sendKeys(landmark)
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(8) td:nth-child(2) input:nth-child(2)")).sendKeys(PHONE)
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-2-3 table tbody tr:nth-child(9) td:nth-child(2) input")).submit()
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-1-2 a")).click()
+    }
+    else {
+      webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.pure-u-4-5")))
+      driver.findElement(By.cssSelector("div.pure-g-r div.pure-u-1-2 a")).click()
+    }
   }
+
+  "user" should "close window" in {
+        driver.close()
+  }
+
 }
